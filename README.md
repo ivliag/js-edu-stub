@@ -1,14 +1,14 @@
 ECO EDU STUB
-============
+------------
 
 Минимальная конфигурация для разработки и написания тестов.
 
-# Как сделать самому с нуля
+## Как сделать самому с нуля
 1. Инициализируем проект
-`npm init`
+```npm init```
 
 2. Устанавливаем зависимости
-`npm i babel-core babel-jest babel-loader babel-preset-env jest webpack -SD`
+```npm i babel-core babel-jest babel-loader babel-preset-env jest webpack -SD```
 
 3. Доваляем в package.json секцию с настройками для `jest`
 ```
@@ -28,9 +28,14 @@ ECO EDU STUB
 }
 ```
 
-5. Добавляем в корень проекта файлик babel.rc с таким текстом
+5. Добавляем в корень проекта файлик .babelrc с таким текстом
 ```
 {
     "presets": ["env"]
 }
 ```
+
+## Как запускать
+1. Тесты `npm test`
+2. Сборка `npm build`
+3. Сбоока c риалтайм-обновлением `watch`
