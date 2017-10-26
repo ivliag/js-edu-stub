@@ -10,7 +10,7 @@ ECO EDU STUB
 2. Устанавливаем зависимости
 ```npm i babel-core babel-jest babel-loader babel-preset-env jest webpack --save-dev```
 
-3. Доваляем в package.json секцию с настройками для `jest`
+3. Добавляем в package.json секцию с настройками для `jest`
 ```
 "jest": {
     "transform": {
