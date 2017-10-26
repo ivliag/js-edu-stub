@@ -1,0 +1,30 @@
+{
+  "name": "js-edu-stub",
+  "version": "1.0.0",
+  "description": "ECO EDU STUB",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivliag/js-edu-stub.git"
+  },
+  "author": "Ivan Lyagushkin",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^21.2.1",
+    "webpack": "^3.8.1"
+  },
+  "jest": {
+      "transform": {
+        ".js$": "babel-jest"
+      }
+  }
+}
