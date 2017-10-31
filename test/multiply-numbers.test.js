@@ -1,7 +1,7 @@
-import { multiplyNumbers } from '../multiply-numbers';
+import { multiplyNumbers } from '../src/multiply-numbers';
 
 describe('multiplu numbers', function () {
-    it('should work', function () {
+    test('should work', function () {
         expect(multiplyNumbers(2, 3)).toBe(6);
-    })
+    });
 });

@@ -10,7 +10,7 @@ ECO EDU STUB
 2. Устанавливаем зависимости
 ```npm i babel-core babel-jest babel-loader babel-preset-env jest webpack --save-dev```
 
-3. Добавляем в package.json секцию с настройками для `jest`
+3. Добавляем в package.json секцию с настройками для `jest`. Здесь мы указываем, что наш код надо отдельно прекомпилить, в частности поменять инструкции `import` на `require`
 ```
 "jest": {
     "transform": {
@@ -28,11 +28,33 @@ ECO EDU STUB
 }
 ```
 
-5. Добавляем в корень проекта файлик .babelrc с таким содержимым
+5. Создаём в корень проекта файлик .babelrc с инструкциями для babel (https://babeljs.io/)
 ```
 {
     "presets": ["env"]
 }
+```
+
+6. Создаём в корне проекта файл webpack.config.js с настройками для сборки проекта:
+```
+const path = require('path');
+
+module.exports = {
+    entry: './src/index.js',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist')
+    },
+    module: {
+        rules: [{
+            test: /\.js$/,
+            exclude: /(node_modules)/,
+            use: {
+                loader: 'babel-loader'
+            }
+        }]
+    }
+};
 ```
 
 ## Как запускать
